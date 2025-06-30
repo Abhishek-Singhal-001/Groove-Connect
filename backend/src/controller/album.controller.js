@@ -1,4 +1,7 @@
 import {Album} from "../models/album.model.js";
+
+//find all the albums 
+//and call the next if error 
 export const getAllAlbums=async (req,res,next)=>{
     try{
         const albums =await Album.find();
@@ -9,6 +12,10 @@ export const getAllAlbums=async (req,res,next)=>{
 
 
 }};
+
+//populate- fetch the album with its songs from 
+// song table becaue we dont have the song info we just have id of the songs 
+
 export const getAlbumById=async (req,res,next)=>{
     try {
         const {albumId} = req.params;

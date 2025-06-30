@@ -46,6 +46,14 @@ app.use(cors(
 app.use(express.json());//to parse the json data 
 app.use(clerkMiddleware());//this will add to the request object 
 
+
+//how many files can be uploaded by the admin 
+//store it under temp folder 
+//holds the files untill uploaded to cloudinary 
+//automatically create the folder if not exist ist time 
+//and restrict the file size 
+//need to implement before we get the files from the request
+
 app.use(fileUpload({
     useTempFiles:true,
     tempFileDir: path.join(__dirname,"tmp"),
@@ -92,7 +100,9 @@ if (process.env.NODE_ENV === "production") {
 	});
 }
 
-
+//error handler
+// middleware to handle errors
+//send the error message to the client or deveploer depend on the mode of useage of the webapp
 
 app.use((err,req,res,next)=>{
     res.status(500).json({message:process.env.NODE_ENV ==="production"?"Internal server error ":err.message
