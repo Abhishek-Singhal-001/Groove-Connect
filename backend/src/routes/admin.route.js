@@ -11,10 +11,10 @@ router.use(protectRoute,requireAdmin);
 //to check the user is admin or not for admin dashboard 
 
 router.get("/check",checkAdmin);
-router.post('/songs',createSong );
-router.delete('/songs/:id',deleteSong);//.songs
-router.post('/albums',createAlbum);
-router.delete('/albums/:id',deleteAlbum);//.albums
+router.post("/songs",createSong );
+router.delete("/songs/:id",deleteSong);//.songs
+router.post("/albums",createAlbum);
+router.delete("/albums/:id",deleteAlbum);//.albums
 
 
 
