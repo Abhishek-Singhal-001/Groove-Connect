@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')!).render(
     <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
     <AuthProvider>
       <BrowserRouter>
-      <App />   
+        <App />   
       </BrowserRouter>   
     </AuthProvider>
          
