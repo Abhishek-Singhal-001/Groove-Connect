@@ -72,6 +72,9 @@ The application follows industry-standard best practices:
 5.Modular & scalable folder structure
 6.Clear separation of concerns
 
+## 📁 Project Structure
+
+```text
 Groove-Connect/
 │
 ├── backend/
