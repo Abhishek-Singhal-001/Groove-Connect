@@ -168,6 +168,7 @@ Groove-Connect/
 ├── .gitignore
 └── README.md
 
+
 🔐 Environment Variables
 Create a .env file inside the backend directory:
 ------------------------------------------------
